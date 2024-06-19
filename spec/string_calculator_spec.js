@@ -18,5 +18,9 @@ describe('String Calculator', function() {
 	it('should return the sum for an unknown amount of numbers', function() {
         expect(calculator.add('1,2,3,4,5')).toEqual(15);
     });
+
+	it('should handle new lines between numbers', function() {
+        expect(calculator.add('1\n2,3')).toEqual(6);
+    });
 	
 });
