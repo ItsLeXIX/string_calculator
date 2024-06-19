@@ -15,4 +15,8 @@ describe('String Calculator', function() {
         expect(calculator.add('1,2')).toEqual(3);
     });
 
+	it('should return the sum for an unknown amount of numbers', function() {
+        expect(calculator.add('1,2,3,4,5')).toEqual(15);
+    });
+	
 });
