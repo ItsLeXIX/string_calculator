@@ -11,4 +11,8 @@ describe('String Calculator', function() {
         expect(calculator.add('5')).toEqual(5);
     });
 
+	it('should return the sum for a two number string separated by comma', function() {
+        expect(calculator.add('1,2')).toEqual(3);
+    });
+
 });
