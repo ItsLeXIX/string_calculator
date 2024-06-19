@@ -23,4 +23,8 @@ describe('String Calculator', function() {
         expect(calculator.add('1\n2,3')).toEqual(6);
     });
 	
+	it('should throw an error for negative numbers', function() {
+        expect(function() { calculator.add('1,-2,-3'); }).toThrow(new Error('negatives not allowed: -2,-3'));
+    });
+
 });
