@@ -1,3 +1,4 @@
+
 describe('String Calculator', function() {
 	beforeEach(function() {
 		calculator = new StringCalculator();
@@ -25,6 +26,10 @@ describe('String Calculator', function() {
 	
 	it('should throw an error for negative numbers', function() {
         expect(function() { calculator.add('1,-2,-3'); }).toThrow(new Error('negatives not allowed: -2,-3'));
+    });
+
+	it('should ignore numbers bigger than 1000', function() {
+        expect(calculator.add('2,1001')).toEqual(2);
     });
 
 });
