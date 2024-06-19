@@ -1,7 +1,12 @@
 // StringCalculator.js
-function StringCalculator() {}
-StringCalculator.prototype.add = function(string_numbers) {
-    if (string_numbers === '') {
-        return 0;
+class StringCalculator {
+    add(numbers) {
+        if (numbers === '') {
+            return 0;
+        } else {
+            return numbers.split(',').reduce((sum, num) => sum + parseInt(num, 10), 0);
+        }
     }
-};
+}
+
+module.exports = StringCalculator;
